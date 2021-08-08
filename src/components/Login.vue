@@ -28,6 +28,7 @@
 </template>
 
 <script>
+const HTTP_OK = 200
 export default {
     data() {
         return {
@@ -44,14 +45,13 @@ export default {
         validate(){
             this.$refs.form.validate()
         },
-        login(){
+        async login(){
             this.validate()
             if(this.valid){
-                this.$store.dispatch('login').then((data) => {
-                    localStorage.setItem('User', data)
-                }).catch(error => {
-                    console.log(error)
-                })
+               let data = await this.$store.dispatch('login', {email: this.email, password: this.password})
+                if(data.status === HTTP_OK) {
+                    this.$router.push('/')
+                }
             }
         }
     }
