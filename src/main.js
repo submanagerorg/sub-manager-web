@@ -10,10 +10,11 @@ import './styles/main.scss'
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
+store.commit('initialiseStore')
+
 new Vue({
-  router,
   store,
   vuetify,
-  beforeCreate() { this.$store.commit('initialiseStore') },
+  router,
   render: h => h(App),
 }).$mount('#app')

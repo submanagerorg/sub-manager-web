@@ -33,6 +33,7 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+    
     if(!store.state.auth.token && to.matched.some(record => record.meta.requiresAuth)){
         next({
             path: '/login',
