@@ -6,6 +6,7 @@
         absolute
         bottom
         temporary
+        color="secondary"
         >
         <v-list>
           <v-list-item class="px-2">
@@ -51,7 +52,7 @@
 
         <template v-slot:append>
             <div class="pa-2">
-            <v-btn block @click="logout">
+            <v-btn block @click="logout" color="primary">
                 Logout
             </v-btn>
             </div>

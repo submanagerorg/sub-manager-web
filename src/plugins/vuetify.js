@@ -14,6 +14,12 @@ const opts = {
             error: '#FF0505',
             background: '#161927', 
           },
+          light: {
+            primary: '#1B56D0',
+            secondary: '#111422',
+            error: '#FF0505',
+            background: '#161927', 
+          },
         }
     }
 }

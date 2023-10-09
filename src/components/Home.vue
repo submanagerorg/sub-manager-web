@@ -8,9 +8,8 @@
             <v-data-table
             :headers="headers"
             :items="items"
-            color="primary"
-            bg-color="secondary"
             class="table-style"
+            color="secondary"
             >
             </v-data-table>
         </div>
