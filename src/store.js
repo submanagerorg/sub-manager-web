@@ -14,7 +14,7 @@ export default new Vuex.Store({
     actions: {
         async login(context, data){
             const baseUrl = process.env.VUE_APP_API_URL
-            const url = '/api/login'
+            const url = '/login'
 
             console.log("base_url", baseUrl)
             console.log("url", url)
@@ -37,7 +37,7 @@ export default new Vuex.Store({
         },
         async getSubs(){
             const baseUrl = process.env.VUE_APP_API_URL
-            const url = '/api/subscriptions'
+            const url = '/subscriptions'
 
             try{
                 let response = await axios.get(baseUrl + url)
